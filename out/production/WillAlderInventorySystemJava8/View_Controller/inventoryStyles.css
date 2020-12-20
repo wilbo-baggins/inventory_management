@@ -1,0 +1,24 @@
+/* Adding CSS to handle some basic styling, because I read that it was possible and why not? */
+.AnchorPane {
+    -fx-pref-width: 1055px;
+    -fx-pref-height: 500px;
+    -fx-background-color: gray;
+}
+
+.SmallAnchorPane {
+    -fx-pref-width: 412px;
+    -fx-pref-height: 500px;
+    -fx-background-color: gray;
+}
+
+.Button {
+    -fx-min-width: 75px;
+    -fx-pref-height: 18px;
+}
+
+.GridPane {
+    -fx-radius: 15px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+}
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="412.0" prefWidth="412.0" styleClass="SmallAnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddPartController">
+    <children>
+        <Label fx:id="addPartLabel" layoutX="14.0" layoutY="14.0" text="Add Part">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="addInHousePartRadio" layoutX="163.0" layoutY="16.0" mnemonicParsing="false" onAction="#InHouseRadioEventHandler" selected="true" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="addPartGroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="addOutsourcedPartRadio" layoutX="283.0" layoutY="16.0" mnemonicParsing="false" onAction="#OutsourcedRadioEventHandler" text="Outsourced" toggleGroup="$addPartGroup">
+            <toggleGroup>
+                <fx:reference source="addPartGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <GridPane layoutX="44.0" layoutY="48.0" prefHeight="296.0" prefWidth="331.0" styleClass="GridPane">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="newPartID" text="ID">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+                <Label fx:id="newPartName" text="Name" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+                <Label fx:id="newPartInv" text="Inv" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+                <Label fx:id="newPartPrice" text="Price/Cost" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+                <Label fx:id="newPartMax" text="Max" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+                <Label fx:id="newPartMachineID" text="Machine ID" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+                <TextField fx:id="newPartIDInput" disable="true" promptText="Auto Gen - Disabled" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                <TextField fx:id="newPartNameInput" promptText="Part Name" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <TextField fx:id="newPartInvInput" promptText="Inv" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                <TextField fx:id="newPartPriceInput" promptText="Price/Cost" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                <TextField fx:id="newPartMaxInput" promptText="Max" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="newPartMinInput" promptText="Min" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></TextField>
+                <TextField fx:id="newPartMachineInput" promptText="Machine ID" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                <Label alignment="CENTER" contentDisplay="CENTER" text="      Min" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Button fx:id="partSaveButton" layoutX="213.0" layoutY="356.0" mnemonicParsing="false" onAction="#SavePartEventHandler" styleClass="Button" text="Save" />
+        <Button fx:id="partCancelButton" layoutX="299.0" layoutY="356.0" mnemonicParsing="false" onAction="#CancelPartEventHandler" styleClass="Button" text="Cancel" />
+    </children>
+</AnchorPane>
